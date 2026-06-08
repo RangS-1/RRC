@@ -1,70 +1,109 @@
-
-.navbar {
-    background-color: #2c3e50;
-    padding: 0;
-    margin: 0;
-    border-style: groove;
-    border-color: #34495e;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+/* ============================================
+   COLOR PALETTE
+   ============================================ */
+:root {
+  --primary-color: #3498db;       /* Biru */
+  --secondary-color: #2ecc71;     /* Hijau */
+  --danger-color: #e74c3c;        /* Merah */
+  --warning-color: #f39c12;       /* Orange */
+  --dark-color: #2c3e50;          /* Abu-abu gelap */
+  --light-color: #ecf0f1;         /* Abu-abu terang */
+  --border-color: #34495e;        /* Border */
+  --hover-color: #1abc9c;         /* Teal */
 }
 
-.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 60px;
+ul, ol {
+  list-style: none;
 }
 
-.navbar li {
-    padding: 0 20px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    color: #ecf0f1;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-bottom: 3px solid transparent;
-    white-space: nowrap;
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 52px;
+  border-bottom: 2px solid var(--primary-color);
+  background: var(--dark-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.navbar li:hover {
-    background-color: #34495e;
-    border-bottom-color: #3498db;
-    color: #3498db;
+.nav-logo {
+  font-family: var(--font-mono);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--light-color);
+  background: linear-gradient(90deg, var(--primary-color), var(--hover-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.navbar li:active {
-    background-color: #1a252f;
-    color: #2980b9;
+.nav-logo:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
 }
 
-@media (max-width: 768px) {
-    .navbar ul {
-        flex-wrap: wrap;
-        height: auto;
-    }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
 
-    .navbar li {
-        padding: 12px 15px;
-        font-size: 14px;
-        border-bottom: none;
-        border-right: 1px solid #34495e;
-    }
+.nav-links a {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  color: var(--light-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: -0.01em;
+  border: 2px solid transparent;
+}
 
-    .navbar li:last-child {
-        border-right: none;
-    }
+.nav-links a:hover {
+  color: white;
+  background-color: var(--primary-color);
+  border-color: var(--hover-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
 
-    .navbar li:hover {
-        background-color: #34495e;
-        border-right-color: #3498db;
-    }
+.nav-links a.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--secondary-color);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+  background: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.hamburger:hover {
+  border-color: var(--hover-color);
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: var(--light-color);
+  transition: all 0.3s ease;
 }

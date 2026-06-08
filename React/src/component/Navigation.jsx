@@ -1,15 +1,16 @@
-import styles from '../assets/css/Navigation.module.css'
+import '../assets/css/Navigation.css'
 
 function Navigation(props){
     return (
-        <div className={styles.navbar}>
-            <ul className={styles.navbarList}>
-                <li className={styles.navItem}>{props.nav1}</li>
-                <li className={styles.navItem}>{props.nav2}</li>
-                <li className={styles.navItem}>{props.nav3}</li>
-                <li className={styles.navItem}>{props.nav4}</li>
+        <nav class="main-nav">
+            <a href="/" class="nav-logo">{props.webname}</a>
+            <ul class="nav-links">
+            <li class="linav"><a href="">{props.nav1}</a></li>
+            <li class="linav"><a href="">{props.nav2}</a></li>
+            <li class="linav"><a href="">{props.nav3}</a></li>
             </ul>
-        </div>
+            <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+        </nav>
     );
 }
 

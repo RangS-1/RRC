@@ -4,7 +4,7 @@ import Navigation from './component/Navigation.jsx'
 function App() {
   return(
     <>
-      <Navigation nav1="Test" nav2="Test"/>
+      <Navigation webname="Your Web" nav1="Test" nav2="Test" nav3="Test"/>
       <Card />
     </>
   )  
