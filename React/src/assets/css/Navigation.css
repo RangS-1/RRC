@@ -1,76 +1,106 @@
-ul, ol {
-  list-style: none;
+:root {
+    --bg: #f0ece3;
+    --bg-alt: #ebe7de;
+    --bg-card: #f7f5f0;
+    --border: #d4cfc6;
+    --border-dark: #b8b2a7;
+    --text: #1c1c1a;
+    --text-muted: #706a5e;
+    --text-light: #9a9288;
+    --accent: #1c1c1a;
+    --accent-link: #5a6b3c;
+    --accent-yellow: #b8860b;
+    --btn-bg: #1c1c1a;
+    --btn-text: #f0ece3;
+    --tag-bg: #e8e4db;
+    --tag-text: #4a4540;
+    --radius: 6px;
+    --radius-lg: 10px;
+    --max-width: 760px;
+    --max-width-wide: 1100px;
+    --font-mono: 'Space Mono', monospace;
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
 }
 
+ul, ol {
+    list-style: none;
+}
 .main-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 24px;
-  height: 52px;
-  border-bottom: 1px solid var(--border);
-  background: var(--bg);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+    right: 0;
+    padding: 0;
+    width: 100%;
+    left: 0;               
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+    position: fixed;
+    top: 0;
+    margin: 0;
+    z-index: 100;
 }
 
 .nav-logo {
-  font-family: var(--font-mono);
-  font-size: 30px;
-  font-weight: 700;
-  color: var(--text);
-  letter-spacing: -0.02em;
-  text-decoration: none;
+    padding-left: 24px;
+    font-family: var(--font-mono);
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    text-decoration: none;
 }
 
 .nav-logo:hover {
-  opacity: 1;
-  color: var(--text);
+    opacity: 1;
+    color: var(--text);
 }
 
 .nav-links {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+    padding-right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .nav-links a {
-  font-family: var(--font-mono);
-  font-size: 20px;
-  color: var(--text-muted);
-  padding: 5px 14px;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: all 0.15s ease;
-  letter-spacing: -0.01em;
+    font-family: var(--font-mono);
+    font-size: 20px;
+    color: var(--text-muted);
+    padding: 5px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.15s ease;
+    letter-spacing: -0.01em;
 }
 
 .nav-links a:hover {
-  color: var(--text);
-  opacity: 1;
+    color: var(--text);
+    opacity: 1;
 }
 
 .nav-links a.active {
-  background-color: var(--btn-bg);
-  color: var(--btn-text);
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
 }
 
 /* Hamburger */
 .hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  padding: 4px;
-  background: none;
-  border: none;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    background: none;
+    border: none;
 }
 
 .hamburger span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: var(--text);
-  transition: all 0.25s ease;
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    transition: all 0.25s ease;
 }
