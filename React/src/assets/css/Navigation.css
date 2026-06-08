@@ -1,17 +1,3 @@
-/* ============================================
-   COLOR PALETTE
-   ============================================ */
-:root {
-  --primary-color: #3498db;       /* Biru */
-  --secondary-color: #2ecc71;     /* Hijau */
-  --danger-color: #e74c3c;        /* Merah */
-  --warning-color: #f39c12;       /* Orange */
-  --dark-color: #2c3e50;          /* Abu-abu gelap */
-  --light-color: #ecf0f1;         /* Abu-abu terang */
-  --border-color: #34495e;        /* Border */
-  --hover-color: #1abc9c;         /* Teal */
-}
-
 ul, ol {
   list-style: none;
 }
@@ -22,31 +8,25 @@ ul, ol {
   justify-content: space-between;
   padding: 0 24px;
   height: 52px;
-  border-bottom: 2px solid var(--primary-color);
-  background: var(--dark-color);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .nav-logo {
   font-family: var(--font-mono);
   font-size: 30px;
   font-weight: 700;
-  color: var(--light-color);
-  background: linear-gradient(90deg, var(--primary-color), var(--hover-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text);
   letter-spacing: -0.02em;
   text-decoration: none;
-  transition: all 0.3s ease;
 }
 
 .nav-logo:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
+  opacity: 1;
+  color: var(--text);
 }
 
 .nav-links {
@@ -58,28 +38,22 @@ ul, ol {
 .nav-links a {
   font-family: var(--font-mono);
   font-size: 20px;
-  color: var(--light-color);
-  padding: 8px 16px;
+  color: var(--text-muted);
+  padding: 5px 14px;
   border-radius: 20px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.15s ease;
   letter-spacing: -0.01em;
-  border: 2px solid transparent;
 }
 
 .nav-links a:hover {
-  color: white;
-  background-color: var(--primary-color);
-  border-color: var(--hover-color);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+  color: var(--text);
+  opacity: 1;
 }
 
 .nav-links a.active {
-  background-color: var(--primary-color);
-  color: white;
-  border-color: var(--secondary-color);
-  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
 }
 
 /* Hamburger */
@@ -88,22 +62,15 @@ ul, ol {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  padding: 8px;
+  padding: 4px;
   background: none;
-  border: 2px solid var(--primary-color);
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-.hamburger:hover {
-  border-color: var(--hover-color);
-  background-color: rgba(52, 152, 219, 0.1);
+  border: none;
 }
 
 .hamburger span {
   display: block;
-  width: 24px;
-  height: 3px;
-  background: var(--light-color);
-  transition: all 0.3s ease;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  transition: all 0.25s ease;
 }
