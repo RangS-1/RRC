@@ -1,8 +1,13 @@
 import '../assets/css/Card.css'
 
-function Card() {
+function Card(props) {
     
-    return <h1>Test</h1>;
+    return (
+        <div class="card">
+            <h1>Test</h1>
+            <p>Halo{props.content}</p>
+        </div>
+    );
 }
 
-export default Card;
+export default Card
