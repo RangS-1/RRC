@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 100% tinggi viewport */
+    margin: 0;
+}
+.content {
+    flex: 1; /* Konten akan tumbuh mengisi ruang */
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 1rem;
+}
