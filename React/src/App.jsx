@@ -8,7 +8,7 @@ function App() {
     <>
       <Navigation webname="Your Web" nav1="Test" nav2="Test" nav3="Test"/>
       <Header headtitle="Header Title" headsubtitle="Header SubTitle"/>
-      <Card />
+      <Card cardtitle="Card Title" content="This is Card Content"/>
       <Footer />
     </>
   )  
