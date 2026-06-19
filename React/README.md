@@ -1,16 +1,122 @@
-# React + Vite
+# RRC - React Components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the React implementation of RangS Reusable Components (RRC), built with React 19+ and Vite for optimal development experience.
 
-Currently, two official plugins are available:
+## 🚀 Quick Start
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+# Install dependencies
+npm install
 
-## React Compiler
+# Start development server
+npm run dev
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Build for production
+npm run build
 
-## Expanding the ESLint configuration
+# Preview production build
+npm run preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Run linter
+npm run lint
+```
+
+## 📦 Available Components
+
+### Layout Components
+
+#### Header
+A page header component with title and subtitle support.
+```jsx
+import Header from './component/Header';
+
+<Header 
+  headtitle="Page Title" 
+  headsubtitle="Page Subtitle"
+/>
+```
+
+#### Navigation
+Responsive navigation bar with logo, menu links, and hamburger menu for mobile.
+```jsx
+import Navigation from './component/Navigation';
+
+<Navigation 
+  webname="Website Name"
+  nav1="Link 1"
+  nav2="Link 2"
+  nav3="Link 3"
+/>
+```
+
+#### Card
+Reusable card component for displaying content.
+```jsx
+import Card from './component/Card';
+
+<Card 
+  cardtitle="Card Title"
+  content="Card content goes here"
+/>
+```
+
+#### Footer
+Footer component with dynamic copyright year.
+```jsx
+import Footer from './component/Footer';
+
+<Footer footerc="Copyright Text" />
+```
+
+## 📁 Project Structure
+
+```
+src/
+├── component/           # React components
+│   ├── Card.jsx
+│   ├── Footer.jsx
+│   ├── Header.jsx
+│   └── Navigation.jsx
+├── assets/
+│   └── css/            # Component styles
+│       ├── Card.css
+│       ├── Footer.css
+│       ├── Header.css
+│       └── Navigation.css
+├── App.jsx
+├── App.css
+├── main.jsx
+└── index.css
+```
+
+## 🛠 Tech Stack
+
+- **React** 19+
+- **Vite** - Next generation frontend build tool
+- **ESLint** - Code quality and consistency
+- **CSS** - Component styling
+
+## 🎨 Styling
+
+Each component includes its own CSS file for modular styling:
+- `Card.css` - Card component styles
+- `Header.css` - Header component styles
+- `Footer.css` - Footer component styles
+- `Navigation.css` - Navigation component styles with responsive design
+
+## 📝 Development
+
+### Build Tools
+
+**Vite Plugins:**
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs) for fast HMR
+
+### ESLint Configuration
+
+For production applications, we recommend extending the ESLint configuration to include TypeScript support. See the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for more information.
+
+## 📚 Learn More
+
+- [Vite Documentation](https://vitejs.dev)
+- [React Documentation](https://react.dev)
+- [Main RRC Repository](https://github.com/RangS-1/RRC)

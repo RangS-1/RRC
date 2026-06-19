@@ -2,7 +2,7 @@ import Card from './component/Card.jsx'
 import Navigation from './component/Navigation.jsx'
 import Footer from './component/Footer.jsx'
 import Header from './component/Header.jsx'
-
+import Article from './component/Article.jsx'
 function App() {
   return(
     <>
@@ -11,6 +11,7 @@ function App() {
       <Card cardtitle="Card Title" content="This is Card Content"/>
       <Card cardtitle="Card Title" content="This is Card Content"/>
       <Card cardtitle="Card Title" content="This is Card Content"/>
+      <Article />
       <Footer />
     </>
   )  

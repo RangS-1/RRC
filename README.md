@@ -100,11 +100,13 @@ npm run lint       # Run linter
 
 ### Currently Available
 
-- **React** - React 19+ components with hooks support
-  - UI Components (buttons, cards, modals, etc.)
-  - Form Components (inputs, selectors, validators)
-  - Layout Components (containers, grids, navigation)
-  - Utility Components
+#### React - React 19+ components with Vite
+
+**Layout Components:**
+- **Header** - Page header component with title and subtitle support
+- **Navigation** - Responsive navigation bar with logo, menu links, and hamburger menu
+- **Footer** - Footer component with dynamic copyright year
+- **Card** - Reusable card component for content presentation
 
 ### Coming Soon
 
@@ -115,39 +117,61 @@ npm run lint       # Run linter
 
 ## 📖 Usage Examples
 
-### React Button Component
+### React Header Component
 
 ```jsx
-import { Button } from './components/Button';
+import Header from './component/Header';
 
-export function Demo() {
+export function App() {
   return (
-    <>
-      <Button variant="primary">Primary</Button>
-      <Button variant="secondary">Secondary</Button>
-      <Button variant="danger" disabled>Disabled</Button>
-    </>
+    <Header 
+      headtitle="Welcome to RRC" 
+      headsubtitle="Reusable Components Library"
+    />
   );
 }
 ```
 
-### React Form Input
+### React Navigation Component
 
 ```jsx
-import { Input } from './components/Input';
-import { useState } from 'react';
+import Navigation from './component/Navigation';
 
-export function FormDemo() {
-  const [value, setValue] = useState('');
-
+export function App() {
   return (
-    <Input
-      type="email"
-      placeholder="Enter your email"
-      value={value}
-      onChange={(e) => setValue(e.target.value)}
-      required
+    <Navigation 
+      webname="RRC"
+      nav1="Home"
+      nav2="Components"
+      nav3="Docs"
     />
+  );
+}
+```
+
+### React Card Component
+
+```jsx
+import Card from './component/Card';
+
+export function Demo() {
+  return (
+    <Card 
+      cardtitle="Feature Card"
+      content="This is a reusable card component for displaying content."
+    />
+  );
+}
+```
+
+### React Footer Component
+
+```jsx
+import Footer from './component/Footer';
+
+export function App() {
+  return (
+    <Footer footerc="2026 RangS Reusable Components" />
   );
 }
 ```
