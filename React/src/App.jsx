@@ -11,7 +11,13 @@ function App() {
       <Card cardtitle="Card Title" content="This is Card Content"/>
       <Card cardtitle="Card Title" content="This is Card Content"/>
       <Card cardtitle="Card Title" content="This is Card Content"/>
-      <Article />
+      <Article 
+        realtag="your tag"
+        date="2026-01-01"
+        read="20 min reading"
+        headline="Your Headline"
+        
+      />
       <Footer />
     </>
   )  
