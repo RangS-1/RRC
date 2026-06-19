@@ -1,0 +1,9 @@
+.page-wrapper {
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.page-wrapper.narrow {
+  max-width: var(--max-width);
+}

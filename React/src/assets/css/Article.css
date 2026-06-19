@@ -1,7 +1,12 @@
+:root{
+  --max-width: 760px;
+  --max-width-wide: 1100px;
+}
+
 .page-wrapper {
   max-width: var(--max-width-wide);
   margin: 0 auto;
-  padding: 48px 24px 80px;
+  padding: 48px 24px 50px;
 }
 
 .page-wrapper.narrow {
@@ -11,7 +16,7 @@
 .article-header {
   padding: 40px 0 32px;
   border-bottom: 1px solid var(--border);
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 .article-header-meta {

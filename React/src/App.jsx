@@ -3,6 +3,8 @@ import Navigation from './component/Navigation.jsx'
 import Footer from './component/Footer.jsx'
 import Header from './component/Header.jsx'
 import Article from './component/Article.jsx'
+import Articlebody from './component/Articlebody.jsx'
+
 function App() {
   return(
     <>
@@ -16,8 +18,12 @@ function App() {
         date="2026-01-01"
         read="20 min reading"
         headline="Your Headline"
+        summary="Your article summary"
+        head="header number 1"
+        head="header number 2"
         
       />
+      
       <Footer />
     </>
   )  
