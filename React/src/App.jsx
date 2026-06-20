@@ -23,7 +23,6 @@ function App() {
         head="header number 1"
         head="header number 2"
       />
-      <center>
       <Tag 
         tag1="Tag1"
         tag2="Tag2"
@@ -31,7 +30,6 @@ function App() {
         tag4="Tag4"
         tag5="Tag5"
       />
-      </center>
       <Footer />
     </>
   )  
