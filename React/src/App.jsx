@@ -4,6 +4,7 @@ import Footer from './component/Footer.jsx'
 import Header from './component/Header.jsx'
 import Article from './component/Article.jsx'
 import Articlebody from './component/Articlebody.jsx'
+import Tag from './component/Tag.jsx'
 
 function App() {
   return(
@@ -21,9 +22,16 @@ function App() {
         summary="Your article summary"
         head="header number 1"
         head="header number 2"
-        
       />
-      
+      <center>
+      <Tag 
+        tag1="Tag1"
+        tag2="Tag2"
+        tag3="Tag3"
+        tag4="Tag4"
+        tag5="Tag5"
+      />
+      </center>
       <Footer />
     </>
   )  

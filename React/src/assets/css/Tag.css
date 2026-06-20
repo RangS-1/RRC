@@ -1,0 +1,26 @@
+.tag {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  border: 1px solid var(--border);
+  padding: 9px 16px;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: all 0.15s;
+  text-align: center;
+}
+
+.tag:hover {
+  border-color: var(--border-dark);
+  opacity: 1;
+  color: var(--text);
+}
+
+.article-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+  justify-content: center;
+}
