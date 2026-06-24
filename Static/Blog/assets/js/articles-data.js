@@ -7,25 +7,25 @@
 const ARTICLES = [
   {
     id: 1,
-    title: "Review Game Celeste: Sebuah Perjalanan Emosional Melalui Puncak Gunung",
+    title: "This is title for pages/example1/index.html",
     slug: "celeste-game-review",
-    summary: "Tak hanya game yang sulit, namun juga penuh dengan emosi dan cerita yang mendalam.",
+    summary: "And this is the summary of the article.",
     category: "game",
     tags: ["review", "indie-game", "celeste", "game"],
     date: "2026-05-20",
     readTime: "15 min",
-    url: "/pages/celeste-game-review/"
+    url: "/pages/example1/"
   },
   {
     id: 2,
-    title: "Absolute Arch Linux Experience: Distro yang tak sesulit itu",
+    title: "Made sure to check your article-data.js",
     slug: "absolute-arch-linux-experience",
-    summary: "Orang menganggap distro arch linux itu sulit, tapi apa yang sulit? Omong kosong belaka?",
+    summary: "Because it change right here!",
     category: "technology",
     tags: ["review", "linux", "distro", "arch"],
     date: "2026-05-30",
     readTime: "20 min",
-    url: "/pages/absolute-arch-linux-experience/"
+    url: "/pages/example2/"
   }
 ];
 
@@ -39,3 +39,4 @@ const CATEGORIES = [
   { value: "art", label: "art" },
   { value: "life", label: "life" }
 ];
+// You can make your own Category, this will add a dropdown in dashboard.html
