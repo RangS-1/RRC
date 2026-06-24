@@ -33,7 +33,7 @@ const ARTICLES = [
 // CATEGORIES
 // ===========================
 const CATEGORIES = [
-  { value: "all", label: "semua kategori" },
+  { value: "all", label: "All Categories" },
   { value: "technology", label: "technology" },
   { value: "game", label: "game" },
   { value: "art", label: "art" },
