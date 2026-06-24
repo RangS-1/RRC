@@ -5,6 +5,7 @@ import Header from './component/Header.jsx'
 import Article from './component/Article.jsx'
 import Articlebody from './component/Articlebody.jsx'
 import Tag from './component/Tag.jsx'
+import DescRight from './component/DescRight.jsx'
 
 function App() {
   return(
@@ -30,6 +31,7 @@ function App() {
         tag4="Tag4"
         tag5="Tag5"
       />
+      <DescRight />
       <Footer />
     </>
   )  
