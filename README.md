@@ -3,236 +3,25 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Repository](https://img.shields.io/badge/Repository-RRC-blue)](https://github.com/RangS-1/RRC)
 
-A comprehensive library of reusable, well-tested components designed for modern web development. RRC provides a collection of components across multiple frameworks and technologies, enabling faster development and consistent design patterns.
+What is RangS Reusable Components? well, just like its name, This is a repository for a components that are reusable sometime on my future project. This project is actually not meant to be used by other, BUT you still can use it on your own Project.
+This Readme.md will help you to use this Components.
 
-## 📋 Table of Contents
+## Available Components
+- React Components (Such as Header, Card, Footer and more)
+- Static Components (Such as Static Blog and Portfolio)
 
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Component Categories](#component-categories)
-- [Usage Examples](#usage-examples)
-- [Contributing](#contributing)
-- [License](#license)
-
-## ✨ Features
-
-- **Framework Agnostic** - Components for React, Vue, vanilla JavaScript, and more
-- **Production Ready** - Well-tested, optimized, and battle-tested components
-- **Easy to Integrate** - Simple API with comprehensive documentation
-- **TypeScript Support** - Full TypeScript support with proper type definitions
-- **Modular Design** - Use only what you need, zero unnecessary bloat
-- **Consistent Styling** - Unified design language across all components
-- **Accessibility First** - WCAG compliant components for inclusive design
-- **Active Maintenance** - Regularly updated with latest best practices
-
-## 📁 Project Structure
+## How To Use
+If you want to use the components, i recommend you to read the README.md inside of those Project, for Example you can see README.md on React/README.md.
+<br>
+You can download this project to start using it or just Copy Paste the code on your local file.
+<hr>
+To Download this Project, you can use Git!
 
 ```
-RRC/
-├── React/                 # React components using Vite
-│   ├── src/
-│   │   ├── components/   # React component library
-│   │   ├── hooks/        # Custom React hooks
-│   │   ├── utils/        # Utility functions
-│   │   └── styles/       # Global and component styles
-│   ├── package.json
-│   ├── vite.config.js
-│   └── ...
-├── docs/                  # Documentation (coming soon)
-├── LICENSE               # MIT License
-└── README.md
+git clone https://github.com/RangS-1/RRC.git 
 ```
 
-## 🚀 Installation
-
-### React Components
-
-```bash
-# Clone the repository
-git clone https://github.com/RangS-1/RRC.git
-cd React
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-```
-
-### Requirements
-
-- **Node.js** 16+ or higher
-- **npm** or **yarn** package manager
-
-## ⚡ Quick Start
-
-### React Components
-
-1. **Import and use a component:**
-
-```jsx
-import { Button } from './components';
-
-export default function App() {
-  return (
-    <Button variant="primary" onClick={() => console.log('Clicked!')}>
-      Click Me
-    </Button>
-  );
-}
-```
-
-2. **Development workflow:**
-
-```bash
-cd React
-npm run dev        # Start dev server
-npm run build      # Build production
-npm run lint       # Run linter
-```
-
-## 🎨 Component Categories
-
-### Currently Available
-
-#### React - React 19+ components with Vite
-
-**Layout Components:**
-- **Header** - Page header component with title and subtitle support
-- **Navigation** - Responsive navigation bar with logo, menu links, and hamburger menu
-- **Footer** - Footer component with dynamic copyright year
-- **Card** - Reusable card component for content presentation
-
-### Coming Soon
-
-- **Vue** - Vue 3 composition API components
-- **Web Components** - Framework-agnostic custom elements
-- **Angular** - Angular 17+ components
-- **Svelte** - Svelte 4+ components
-
-## 📖 Usage Examples
-
-### React Header Component
-
-```jsx
-import Header from './component/Header';
-
-export function App() {
-  return (
-    <Header 
-      headtitle="Welcome to RRC" 
-      headsubtitle="Reusable Components Library"
-    />
-  );
-}
-```
-
-### React Navigation Component
-
-```jsx
-import Navigation from './component/Navigation';
-
-export function App() {
-  return (
-    <Navigation 
-      webname="RRC"
-      nav1="Home"
-      nav2="Components"
-      nav3="Docs"
-    />
-  );
-}
-```
-
-### React Card Component
-
-```jsx
-import Card from './component/Card';
-
-export function Demo() {
-  return (
-    <Card 
-      cardtitle="Feature Card"
-      content="This is a reusable card component for displaying content."
-    />
-  );
-}
-```
-
-### React Footer Component
-
-```jsx
-import Footer from './component/Footer';
-
-export function App() {
-  return (
-    <Footer footerc="2026 RangS Reusable Components" />
-  );
-}
-```
-
-## 🛠️ Development
-
-### Available Scripts
-
-```bash
-npm run dev       # Start Vite dev server
-npm run build     # Build for production
-npm run preview   # Preview production build
-npm run lint      # Run ESLint
-```
-
-### Code Quality
-
-We follow:
-- **ESLint** for code linting
-- **React Hooks** best practices
-- **Semantic HTML** for accessibility
-- **CSS Modules/BEM** for styling
-
-## 🤝 Contributing
-
-To contribute:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/awesome-component`)
-3. **Commit** your changes (`git commit -m 'Add awesome component'`)
-4. **Push** to the branch (`git push origin feature/awesome-component`)
-5. **Open** a Pull Request
-
-### Guidelines
-
-- Follow the existing code style
-- Write clear, descriptive commit messages
-- Add tests for new components
-- Update documentation
-- Ensure all linting passes (`npm run lint`)
-
-## 📝 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-```
-Copyright (c) 2026 RangS
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software.
-```
-
-## 📞 Support
-
-For issues, feature requests, or questions:
-- Open an [Issue](https://github.com/yourusername/RRC/issues)
-- Start a [Discussion](https://github.com/yourusername/RRC/discussions)
-
----
-
-Built from programmer to programmer
+## License
+All of this project is using MIT License, it means that you can modify and use it for commercial use.
+<br>
+And as always, "From Programmer to Programmer"
