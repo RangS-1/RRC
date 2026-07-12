@@ -1,10 +1,13 @@
-print("Yo?")
+_G.love = require("love")
 
-function weirdstr()
-    print(1 + "1")
+function love.load()
+
 end
 
-weirdstr()
+function love.update(dt)
 
-/*You might be wondering why 1 + "1" equals 2*/
-/*Don't ask me!*/
+end
+
+function love.draw()
+    love.graphics.print("Hi Mom")
+end
