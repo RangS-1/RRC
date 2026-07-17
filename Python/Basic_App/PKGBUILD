@@ -1,0 +1,43 @@
+pkgname=app_name
+# This _repo is used if your github repository has capital in its name
+_repo=AppName
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Your app Description"
+arch=('any')
+url="https://github.com/username/AppName"
+license=('MIT')
+
+depends=(
+    'python'
+    'python-requests'
+)
+
+makedepends=(
+    'python-build'
+    'python-installer'
+    'python-wheel'
+    'python-setuptools'
+)
+
+source=(
+    "$pkgname-$pkgver.tar.gz::https://github.com/username/${_repo}/archive/refs/tags/v$pkgver.tar.gz"
+)
+
+sha256sums=('use sha256sum name_file.tar.gz to get the checksum, paste it here')
+
+build() {
+    cd "$srcdir/${_repo}-${pkgver}"
+    python -m build --wheel --no-isolation
+}
+
+package() {
+    cd "$srcdir/${_repo}-${pkgver}"
+
+    python -m installer \
+        --destdir="$pkgdir" \
+        dist/*.whl
+
+    install -Dm644 LICENSE \
+    "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}

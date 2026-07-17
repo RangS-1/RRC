@@ -1,0 +1,22 @@
+[project]
+name = "app_name"
+version = "1.0.0"
+description = "Your app Description"
+authors = [
+    {name="Your_Name"}
+]
+
+dependencies = [
+    "first_dependencies",
+    "second_dependencies",
+]
+
+[project.scripts]
+app_name = "app\.main:main"
+
+[build-system]
+requires = [
+    "setuptools>=61",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
