@@ -2,8 +2,9 @@ import os
 from colorama import Fore
 from pathlib import Path as pt
 
+home_dir = pt.home() / ".rrc"
+
 def install():
-    home_dir = pt.home() / ".rrc"
     if home_dir.exists():
         success()
         print(f".rrc directory on {home_dir} exists.")
@@ -20,8 +21,11 @@ def install():
             failed()
             print("Installation Skipped...")
 
+def update():
+    print(f".rrc directory updated at {home_dir}.")
+    os.system("rm -rf ~/.rrc && git clone https://github.com/RangS-1/rrc.git ~/.rrc")
+
 def list():
-    home_dir = pt.home() / ".rrc"
     exclude_folder = '.git'
 
     for dirpath, dirnames, filenames in os.walk(home_dir):
@@ -48,6 +52,8 @@ def main():
             list()
         elif choose_templates == "install":
             install()
+        elif choose_templates == "update":
+            update()
         elif choose_templates == "exit":
             success()
             print("See You Soon!")
