@@ -9,12 +9,13 @@ def install():
         success()
         print(f".rrc directory on {home_dir} exists.")
     else:
-        check()
+        failed()
         print(f".rrc directory on {home_dir} does not exist!")
         check()
         update = input("Would you like to install it? (y/n): ")
         if update.lower() == 'y':
             home_dir.mkdir(parents=True, exist_ok=True)
+            success()
             print(f".rrc directory created at {home_dir}.")
             os.system("git clone https://github.com/RangS-1/rrc.git ~/.rrc")
         else:
