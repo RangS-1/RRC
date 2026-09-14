@@ -62,6 +62,18 @@ Go to your fork repository on github then just click create pull request. In you
 
 Wait until it reviewed by maintainer, if maintainer approve the templates, congrats! you are a contributor now!
 
+## Contribution Rules
+
+There are several rules to contribute to this project.
+
+1. Only make change on a specific type, example: you want to make a templates to Web. Then make the template on the folder
+
+```bash
+templates/web/<sub-domain>/<your-template>
+```
+
+2. Test before create a pull request.
+
 ## Thank You
 
 Your contributions to open source, large or small, make great projects like this possible. Thank you for taking the time to contribute, or just read this contributing page.
