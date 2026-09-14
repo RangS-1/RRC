@@ -7,7 +7,7 @@ function love.load()
 end
 
 function love.update(dt)
-    speed = 100
+    speed = 3
     if love.keyboard.isDown("right") or love.keyboard.isDown("d") then
         player.x = player.x + speed
     end
