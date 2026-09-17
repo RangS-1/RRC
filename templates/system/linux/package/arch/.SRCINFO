@@ -1,0 +1,16 @@
+pkgbase = apppackage
+	pkgdesc = Description
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://github.com/
+	arch = any
+	license = MIT
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-wheel
+	makedepends = python-setuptools
+	depends = python
+	source = apppackage-1.0.0.tar.gz::https://github.com//AppPackage/archive/refs/tags/v1.0.0.tar.gz
+	sha256sums = PUT_HASH_CODE_HERE!
+
+pkgname = apppackage
