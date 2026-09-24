@@ -1,12 +1,12 @@
-// ===========================
-// MAIN.JS
-// Common UI interactions
-// ===========================
 
-// --- NAV ACTIVE STATE ---
+
+
+
+
+
 function setNavActive() {
   const path = window.location.pathname;
-  // Main nav
+  
   document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(link => {
     const href = link.getAttribute('href');
     if (!href) return;
@@ -23,7 +23,7 @@ function setNavActive() {
     }
   });
 
-  // Sub nav
+  
   document.querySelectorAll('.sub-nav a').forEach(link => {
     const href = link.getAttribute('href');
     if (!href) return;
@@ -33,7 +33,7 @@ function setNavActive() {
   });
 }
 
-// --- MOBILE MENU ---
+
 function initMobileMenu() {
   const hamburger = document.querySelector('.hamburger');
   const mobileMenu = document.querySelector('.mobile-menu');
@@ -43,7 +43,7 @@ function initMobileMenu() {
     mobileMenu.classList.toggle('open');
   });
 
-  // Close on link click
+  
   mobileMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       mobileMenu.classList.remove('open');
@@ -51,7 +51,7 @@ function initMobileMenu() {
   });
 }
 
-// --- LIGHTBOX ---
+
 let lightboxEl = null;
 
 function createLightbox() {
@@ -70,13 +70,13 @@ function createLightbox() {
   `;
   document.body.appendChild(lightboxEl);
 
-  // Close via button
+  
   document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
-  // Close via overlay click
+  
   lightboxEl.addEventListener('click', (e) => {
     if (e.target === lightboxEl) closeLightbox();
   });
-  // Close via ESC
+  
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeLightbox();
   });
@@ -109,7 +109,7 @@ function closeLightbox() {
   }
 }
 
-// --- DASHBOARD SEARCH + FILTER + PAGINATION ---
+
 function initDashboard() {
   const searchInput = document.getElementById('searchInput');
   const categorySelect = document.getElementById('categorySelect');
@@ -123,7 +123,7 @@ function initDashboard() {
   let currentPage = 1;
   let filteredArticles = [...ARTICLES];
 
-  // Populate category dropdown
+  
   if (categorySelect && typeof CATEGORIES !== 'undefined') {
     CATEGORIES.forEach(cat => {
       const opt = document.createElement('option');
@@ -133,7 +133,7 @@ function initDashboard() {
     });
   }
 
-  // --- Render articles for current page ---
+  
   function renderPage() {
     articleList.innerHTML = '';
 
@@ -145,7 +145,7 @@ function initDashboard() {
     }
 
     const totalPages = Math.ceil(filteredArticles.length / ARTICLES_PER_PAGE);
-    // Clamp currentPage
+    
     if (currentPage < 1) currentPage = 1;
     if (currentPage > totalPages) currentPage = totalPages;
 
@@ -181,14 +181,14 @@ function initDashboard() {
     renderPagination(totalPages);
   }
 
-  // --- Render pagination buttons ---
+  
   function renderPagination(totalPages) {
     if (!paginationEl) return;
     paginationEl.innerHTML = '';
 
     if (totalPages <= 1) return;
 
-    // Helper: create a page button
+    
     function makeBtn(label, page, isActive, isDisabled, isEllipsis) {
       const btn = document.createElement('button');
       btn.className = 'page-btn';
@@ -200,20 +200,20 @@ function initDashboard() {
         btn.addEventListener('click', () => {
           currentPage = page;
           renderPage();
-          // Scroll to article list top
+          
           articleList.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
       }
       return btn;
     }
 
-    // « Prev button
+    
     const prevBtn = makeBtn('«', currentPage - 1, false, currentPage === 1, false);
     paginationEl.appendChild(prevBtn);
 
-    // Build page number list with ellipsis logic
-    // Always show: first, last, currentPage-1, currentPage, currentPage+1
-    const delta = 2; // pages around current
+    
+    
+    const delta = 2; 
     const range = [];
     const rangeWithDots = [];
 
@@ -244,12 +244,12 @@ function initDashboard() {
       }
     });
 
-    // » Next button
+    
     const nextBtn = makeBtn('»', currentPage + 1, false, currentPage === totalPages, false);
     paginationEl.appendChild(nextBtn);
   }
 
-  // --- Filter articles and reset to page 1 ---
+  
   function filterArticles() {
     const query = searchInput.value.toLowerCase().trim();
     const category = categorySelect ? categorySelect.value : 'all';
@@ -270,23 +270,23 @@ function initDashboard() {
       );
     }
 
-    // Sort articles by ID (newest first)
+    
     filteredArticles.sort((a, b) => b.id - a.id);
 
     currentPage = 1;
     renderPage();
   }
 
-  //renderPage()
-  // Initial render (calls filterArticles to apply sorting)
+  
+  
   filterArticles();
 
-  // Bind events
+  
   searchInput.addEventListener('input', filterArticles);
   if (categorySelect) categorySelect.addEventListener('change', filterArticles);
 }
 
-// --- INIT ---
+
 document.addEventListener('DOMContentLoaded', () => {
   setNavActive();
   initMobileMenu();

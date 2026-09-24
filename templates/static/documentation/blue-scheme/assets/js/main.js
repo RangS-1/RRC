@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // ==========================================
-  // LIGHT / DARK MODE THEME TOGGLE
-  // ==========================================
+  
+  
+  
   const themeToggleBtn = document.getElementById('theme-toggle');
   const sunIcon = document.getElementById('sun-icon');
   const moonIcon = document.getElementById('moon-icon');
 
-  // Helper to apply theme
+  
   const applyTheme = (isDark) => {
     if (isDark) {
       document.body.classList.add('dark-mode');
@@ -19,13 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Determine initial theme
+  
   const savedTheme = localStorage.getItem('theme');
   const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   let isDarkMode = savedTheme === 'dark' || (!savedTheme && systemPrefersDark);
   applyTheme(isDarkMode);
 
-  // Toggle button event listener
+  
   if (themeToggleBtn) {
     themeToggleBtn.addEventListener('click', () => {
       isDarkMode = !isDarkMode;
@@ -34,17 +34,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ==========================================
-  // ACTIVE NAVIGATION LINK HIGHLIGHTING
-  // ==========================================
+  
+  
+  
   const currentPath = window.location.pathname;
   const navLinks = document.querySelectorAll('.nav-link');
   const sidebarLinks = document.querySelectorAll('.sidebar-item-link');
 
-  // Highlight Navbar Items
+  
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
-    // Home page check
+    
     if (href.endsWith('index.html') && href.split('/').length <= 2) {
       if (currentPath === '/' || currentPath.endsWith('index.html') && !currentPath.includes('/docs/') && !currentPath.includes('/about/')) {
         link.classList.add('active');
@@ -56,10 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Highlight Sidebar Items in Docs
+  
   sidebarLinks.forEach(link => {
     const href = link.getAttribute('href');
-    // Extract folder names to compare
+    
     const cleanHref = href.replace('../../', '').replace('../', '');
     const cleanPath = currentPath;
     
@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ==========================================
-  // SEARCH BAR SHORTCUT (CTRL + K)
-  // ==========================================
+  
+  
+  
   const searchInput = document.querySelector('.search-input');
   
   document.addEventListener('keydown', (e) => {
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Decorative Search functionality (mock alert)
+    
     searchInput.addEventListener('keypress', (e) => {
       if (e.key === 'Enter') {
         alert(`Searching for: "${searchInput.value}"... (Aplikasi demo: modul pencarian tidak tersambung)`);
@@ -99,9 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ==========================================
-  // TABLE OF CONTENTS (TOC) ACTIVE HEADING TRACKER
-  // ==========================================
+  
+  
+  
   const tocLinks = document.querySelectorAll('.toc-link');
   const headings = Array.from(document.querySelectorAll('.docs-body section h2, .docs-body section h3'));
 

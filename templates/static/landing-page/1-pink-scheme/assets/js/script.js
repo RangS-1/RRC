@@ -1,6 +1,4 @@
-/**
- * Portfolio & Help Center Template Rendering Script
- */
+
 
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initApp);
@@ -22,9 +20,7 @@ function initApp() {
   }
 }
 
-/* ==========================================================================
-   HOMEPAGE PROJECTS FUNCTIONS
-   ========================================================================== */
+
 
 function getProjectsData() {
   if (typeof projectsData !== 'undefined' && Array.isArray(projectsData)) {
@@ -186,9 +182,7 @@ function renderCardHTML(project) {
   `;
 }
 
-/* ==========================================================================
-   HELP CENTER CARDS & MODAL FUNCTIONS
-   ========================================================================== */
+
 
 function getHelpData() {
   if (typeof helpData !== 'undefined' && Array.isArray(helpData)) {

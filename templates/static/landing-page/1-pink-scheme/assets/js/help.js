@@ -1,12 +1,4 @@
-/**
- * Template Help & Resource Data
- * 
- * Instructions:
- * Edit the `helpData` array below to customize items in your Help Center.
- * Each item contains 2 descriptions:
- * - `shortDescription`: Shown on the card preview before click
- * - `fullDescription`: Shown in the detail popup modal after click
- */
+
 
 window.helpData = [
   {

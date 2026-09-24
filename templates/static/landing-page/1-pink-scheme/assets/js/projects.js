@@ -1,11 +1,4 @@
-/**
- * Template Project Data
- * 
- * Instructions:
- * Edit the `projectsData` array below to customize the projects displayed on your homepage.
- * Available categories by default: 'Web', 'Python', 'Flutter', 'Android', 'Scripting', 'Contribution'.
- * You can also add custom categories!
- */
+
 
 window.projectsData = [
   {
