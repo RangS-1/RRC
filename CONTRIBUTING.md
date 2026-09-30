@@ -75,7 +75,7 @@ templates/web/<sub-domain>/<your-template>
 2. Test before create a pull request.
 3. Remember for a template, use kebab-case for the name of the folder.
 
-if you want to learn more about the rule, check out [RULES](RULES).
+if you want to learn more about the rule, check out [RULES](RULES.md).
 
 ## Thank You
 
