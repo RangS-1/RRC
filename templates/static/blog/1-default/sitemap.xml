@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://yoursite.com/</loc>
+    </url>
+
+    <!-- Projects Page -->
+    <url>
+        <loc>https://yoursite.com/projects/</loc>
+    </url>
+
+    <!-- About Page -->
+    <url>
+        <loc>https://yoursite.com/about/</loc>
+    </url>
+
+    <!-- Dashboard Page -->
+    <url>
+        <loc>https://yoursite.com/dashboard/</loc>
+    </url>
+
+    <!-- Pages -->
+    <url>
+        <loc>https://yoursite.com/pages/example1/</loc>
+    </url>
+
+    <url>
+        <loc>https://yoursite.com/pages/example2/</loc>
+    </url>
+
+</urlset>
